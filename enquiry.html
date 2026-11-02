@@ -1,17 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry | Second Spin Sewing Studio</title>
+
+    <title>Make an Enquiry | Second Spin Sewing Studio</title>
+
+    <meta name="description"
+          content="Contact Second Spin Sewing Studio about clothing repairs, alterations, sewing workshops, clothing donations and volunteering.">
+
+    <meta name="author" content="Second Spin Sewing Studio">
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <header class="site-header">
-
         <div class="container header-content">
 
             <img src="IMAGES/logo.jpg.jpg"
@@ -24,36 +32,27 @@
             </div>
 
         </div>
-
     </header>
 
-
-    <nav class="main-nav">
-
+    <nav class="main-nav" aria-label="Main navigation">
         <div class="container">
-
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services &amp; Workshops</a></li>
                 <li><a href="mandela-day.html">Mandela Day</a></li>
-                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                <li><a href="enquiry.html" class="active" aria-current="page">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
         </div>
-
     </nav>
-
 
     <main>
 
         <section class="section">
-
             <div class="container">
 
                 <div class="section-title">
-
                     <p class="small-heading">GET IN TOUCH</p>
 
                     <h2>Make an Enquiry</h2>
@@ -63,188 +62,139 @@
                         volunteering? Complete the form below and tell
                         us how we can help.
                     </p>
-
                 </div>
-
 
                 <div class="form-container">
 
-                    <form>
+                    <form id="enquiryForm">
 
                         <div class="form-group">
-
-                            <label for="fullname">
-                                Full Name
-                            </label>
+                            <label for="fullname">Full Name</label>
 
                             <input type="text"
                                    id="fullname"
                                    name="fullname"
                                    placeholder="Enter your full name"
+                                   autocomplete="name"
+                                   minlength="2"
+                                   maxlength="100"
                                    required>
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <label for="email">
-                                Email Address
-                            </label>
+                            <label for="email">Email Address</label>
 
                             <input type="email"
                                    id="email"
                                    name="email"
                                    placeholder="Enter your email address"
+                                   autocomplete="email"
                                    required>
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <label for="phone">
-                                Phone Number
-                            </label>
+                            <label for="phone">Phone Number</label>
 
                             <input type="tel"
                                    id="phone"
                                    name="phone"
-                                   placeholder="Enter your phone number">
-
+                                   placeholder="e.g. 0712345678"
+                                   autocomplete="tel"
+                                   pattern="[0-9+() -]{7,20}"
+                                   title="Enter a valid phone number using numbers, spaces, brackets or a plus sign.">
                         </div>
 
-
                         <div class="form-group">
-
-                            <label for="enquiry-type">
-                                Enquiry Type
-                            </label>
+                            <label for="enquiry-type">Enquiry Type</label>
 
                             <select id="enquiry-type"
                                     name="enquiry-type"
                                     required>
 
-                                <option value="">
-                                    Select an option
-                                </option>
-
-                                <option value="repair">
-                                    Clothing Repair
-                                </option>
-
-                                <option value="alteration">
-                                    Alteration
-                                </option>
-
-                                <option value="workshop">
-                                    Sewing Workshop
-                                </option>
-
-                                <option value="donation">
-                                    Clothing Donation
-                                </option>
-
-                                <option value="volunteer">
-                                    Volunteering
-                                </option>
-
-                                <option value="other">
-                                    Other
-                                </option>
+                                <option value="">Select an option</option>
+                                <option value="Clothing Repair">Clothing Repair</option>
+                                <option value="Alteration">Alteration</option>
+                                <option value="Sewing Workshop">Sewing Workshop</option>
+                                <option value="Clothing Donation">Clothing Donation</option>
+                                <option value="Volunteering">Volunteering</option>
+                                <option value="Other">Other</option>
 
                             </select>
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <label for="message">
-                                Your Message
-                            </label>
+                            <label for="message">Your Message</label>
 
                             <textarea id="message"
                                       name="message"
                                       rows="6"
+                                      minlength="10"
+                                      maxlength="1000"
                                       placeholder="Tell us more about your enquiry"
                                       required></textarea>
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <p class="form-title">
-                                Would you like to volunteer?
-                            </p>
+                            <p class="form-title">Would you like to volunteer?</p>
 
                             <div class="choice-group">
-
                                 <label>
                                     <input type="radio"
                                            name="volunteer"
-                                           value="yes">
+                                           value="Yes">
                                     Yes
                                 </label>
 
                                 <label>
                                     <input type="radio"
                                            name="volunteer"
-                                           value="no">
+                                           value="No">
                                     No
                                 </label>
-
                             </div>
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <p class="form-title">
-                                What are you interested in?
-                            </p>
+                            <p class="form-title">What are you interested in?</p>
 
                             <div class="choice-group">
-
                                 <label>
                                     <input type="checkbox"
                                            name="interest"
-                                           value="repairs">
+                                           value="Repairs">
                                     Repairs
                                 </label>
 
                                 <label>
                                     <input type="checkbox"
                                            name="interest"
-                                           value="workshops">
+                                           value="Workshops">
                                     Workshops
                                 </label>
 
                                 <label>
                                     <input type="checkbox"
                                            name="interest"
-                                           value="donations">
+                                           value="Donations">
                                     Donations
                                 </label>
 
                                 <label>
                                     <input type="checkbox"
                                            name="interest"
-                                           value="mandela-day">
+                                           value="Mandela Day">
                                     Mandela Day
                                 </label>
-
                             </div>
-
                         </div>
 
+                        <div id="enquiryFeedback"
+                             role="status"
+                             aria-live="polite"
+                             hidden></div>
 
                         <div class="form-buttons">
-
-                            <button type="submit"
-                                    class="button">
+                            <button type="submit" class="button">
                                 Submit Enquiry
                             </button>
 
@@ -252,20 +202,15 @@
                                     class="button button-outline">
                                 Clear Form
                             </button>
-
                         </div>
 
                     </form>
 
                 </div>
-
             </div>
-
         </section>
 
-
         <section class="cta-section">
-
             <div class="container">
 
                 <h2>We Would Love to Hear From You</h2>
@@ -280,14 +225,11 @@
                 </a>
 
             </div>
-
         </section>
 
     </main>
 
-
     <footer class="site-footer">
-
         <div class="container">
 
             <h3>Second Spin Sewing Studio</h3>
@@ -301,8 +243,13 @@
             </p>
 
         </div>
-
     </footer>
+
+    <!-- Internal JavaScript: Enquiry Form Validation -->
+   
+<script src="JS/script.js"></script>
+
+ 
 
 </body>
 </html>

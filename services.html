@@ -1,15 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services &amp; Workshops | Second Spin Sewing Studio</title>
+
+    <title>Sewing Services & Workshops | Second Spin Sewing Studio</title>
+
+    <meta name="description"
+          content="Discover clothing repairs, alterations, upcycling and sewing workshops at Second Spin Sewing Studio. Repair, restyle and rewear your clothes.">
+
+    <meta name="keywords"
+          content="sewing services, clothing repairs, alterations, clothing upcycling, sewing workshops, sustainable fashion, Second Spin Sewing Studio">
+
+    <meta name="author" content="Second Spin Sewing Studio">
+
+    <meta name="robots" content="index, follow">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- Website Header -->
     <header class="site-header">
         <div class="container header-content">
 
@@ -25,13 +39,16 @@
         </div>
     </header>
 
-
-    <nav class="main-nav">
+    <!-- Navigation -->
+    <nav class="main-nav" aria-label="Main navigation">
         <div class="container">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html" class="active">Services &amp; Workshops</a></li>
+                <li>
+                    <a href="services.html" class="active"
+                       aria-current="page">Services &amp; Workshops</a>
+                </li>
                 <li><a href="mandela-day.html">Mandela Day</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -39,11 +56,10 @@
         </div>
     </nav>
 
-
     <main>
 
+        <!-- Hero Section -->
         <section class="hero">
-
             <div class="container hero-layout">
 
                 <div class="hero-text">
@@ -53,14 +69,14 @@
                     <h2>Services &amp; Workshops</h2>
 
                     <p>
-                        At Second Spin Sewing Studio, we believe that clothes
-                        deserve more than one chance.
+                        At Second Spin Sewing Studio, we believe that
+                        clothes deserve more than one chance.
                     </p>
 
                     <p>
-                        Our sewing services help repair and improve garments,
-                        while our workshops teach useful sewing and upcycling
-                        skills.
+                        Our sewing services help repair and improve
+                        garments, while our workshops teach useful
+                        sewing and upcycling skills.
                     </p>
 
                     <a href="enquiry.html" class="button">
@@ -69,9 +85,7 @@
 
                 </div>
 
-
                 <div class="hero-image">
-
                     <picture>
                         <source media="(max-width: 768px)"
                                 srcset="IMAGES/services.jpg.jpg">
@@ -81,33 +95,49 @@
                              sizes="(max-width: 768px) 90vw, 45vw"
                              alt="Sewing and clothing repair services">
                     </picture>
-
                 </div>
 
             </div>
-
         </section>
 
-
+        <!-- Services and Search -->
         <section class="section light-section">
-
             <div class="container">
 
                 <div class="section-title">
                     <p class="small-heading">WHAT WE OFFER</p>
+
                     <h2>Our Sewing Services</h2>
 
                     <p>
-                        Our services focus on extending the life of clothing
-                        instead of throwing garments away.
+                        Our services focus on extending the life of
+                        clothing instead of throwing garments away.
                     </p>
                 </div>
 
+                <!-- JavaScript Search -->
+                <div class="service-search">
+                    <label for="serviceSearch">
+                        Search our sewing services:
+                    </label>
 
-                <div class="card-grid">
+                    <input
+                        type="search"
+                        id="serviceSearch"
+                        placeholder="Try repairs, alterations or upcycling..."
+                        autocomplete="off"
+                        aria-describedby="searchMessage">
+
+                    <p id="searchMessage" aria-live="polite">
+                        Showing all services.
+                    </p>
+                </div>
+
+                <div class="card-grid" id="serviceCards">
 
                     <article class="card">
                         <div class="card-number">01</div>
+
                         <h3>Clothing Repairs</h3>
 
                         <p>
@@ -116,20 +146,21 @@
                         </p>
                     </article>
 
-
                     <article class="card">
                         <div class="card-number">02</div>
+
                         <h3>Alterations</h3>
 
                         <p>
-                            Clothing can be adjusted to improve its fit and
-                            allow garments to continue being worn comfortably.
+                            Clothing can be adjusted to improve its fit
+                            and allow garments to continue being worn
+                            comfortably.
                         </p>
                     </article>
 
-
                     <article class="card">
                         <div class="card-number">03</div>
+
                         <h3>Upcycling</h3>
 
                         <p>
@@ -140,17 +171,18 @@
 
                 </div>
 
-            </div>
+                <p id="noServicesMessage" hidden>
+                    No matching services found. Please try another search.
+                </p>
 
+            </div>
         </section>
 
-
+        <!-- Sewing Workshops -->
         <section class="section">
-
             <div class="container two-column">
 
                 <div>
-
                     <picture>
                         <source media="(max-width: 768px)"
                                 srcset="IMAGES/workshops.jpg.jpg">
@@ -158,12 +190,10 @@
                         <img src="IMAGES/workshops.jpg.jpg"
                              srcset="IMAGES/workshops.jpg.jpg 800w"
                              sizes="(max-width: 768px) 90vw, 45vw"
-                             alt="Second Spin sewing workshop"
+                             alt="Participants learning sewing skills at a workshop"
                              class="about-image">
                     </picture>
-
                 </div>
-
 
                 <div>
 
@@ -178,9 +208,9 @@
                     </p>
 
                     <p>
-                        Participants learn how to repair clothing, use basic
-                        sewing techniques and find creative ways to reuse
-                        garments.
+                        Participants learn how to repair clothing,
+                        use basic sewing techniques and find creative
+                        ways to reuse garments.
                     </p>
 
                     <h3>Workshop Activities</h3>
@@ -193,8 +223,6 @@
                         <li>Learning about sustainable fashion</li>
                     </ul>
 
-                    <br>
-
                     <a href="enquiry.html" class="button">
                         Enquire About a Workshop
                     </a>
@@ -202,12 +230,10 @@
                 </div>
 
             </div>
-
         </section>
 
-
+        <!-- Sustainability Section -->
         <section class="mandela-section">
-
             <div class="container">
 
                 <div class="section-title">
@@ -218,16 +244,17 @@
                     <h2>Why Repair Instead of Replace?</h2>
 
                     <p>
-                        Repairing and reusing clothing can extend the life
-                        of garments and reduce unnecessary clothing waste.
+                        Repairing and reusing clothing can extend the
+                        life of garments and reduce unnecessary
+                        clothing waste.
                     </p>
                 </div>
-
 
                 <div class="three-points">
 
                     <div class="point">
                         <h3>Save Clothing</h3>
+
                         <p>
                             Give damaged or unwanted garments another
                             opportunity to be worn.
@@ -236,29 +263,29 @@
 
                     <div class="point">
                         <h3>Reduce Waste</h3>
+
                         <p>
-                            Reusing clothing helps prevent usable garments
-                            from being discarded unnecessarily.
+                            Reusing clothing helps prevent usable
+                            garments from being discarded unnecessarily.
                         </p>
                     </div>
 
                     <div class="point">
                         <h3>Learn Skills</h3>
+
                         <p>
-                            Sewing skills make it easier to repair and reuse
-                            clothing in the future.
+                            Sewing skills make it easier to repair
+                            and reuse clothing in the future.
                         </p>
                     </div>
 
                 </div>
 
             </div>
-
         </section>
 
-
+        <!-- Call to Action -->
         <section class="cta-section">
-
             <div class="container">
 
                 <h2>Need a Repair or Want to Join a Workshop?</h2>
@@ -273,14 +300,12 @@
                 </a>
 
             </div>
-
         </section>
 
     </main>
 
-
+    <!-- Footer -->
     <footer class="site-footer">
-
         <div class="container">
 
             <h3>Second Spin Sewing Studio</h3>
@@ -294,8 +319,13 @@
             </p>
 
         </div>
-
     </footer>
+
+    <!-- Internal JavaScript: Search Services -->
+    
+<script src="JS/script.js"></script>
+
+    
 
 </body>
 </html>
