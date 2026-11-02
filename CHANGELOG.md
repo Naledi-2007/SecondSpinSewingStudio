@@ -12,6 +12,10 @@
 - Added email preparation functionality to the contact form.
 - Improved SEO using page titles and meta descriptions.
 - Added robots.txt and sitemap.xml.
-- Updated website documentation.
+- Created an interactive gallery page.
+- Added gallery category filters for repairs, upcycling and sewing.
+- Added image enlargement functionality using a lightbox.
+- Updated website navigation to include the Gallery page.
+- Updated the sitemap and project documentation.
 - Tested website navigation, images and mobile responsiveness.
 - Published the website using GitHub Pages.
