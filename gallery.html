@@ -1,247 +1,240 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gallery | Second Spin Sewing Studio</title>
-    <meta name="description" content="Explore sewing, clothing repairs and sustainable fashion inspiration at Second Spin Sewing Studio.">
+
+    <meta name="description"
+        content="Explore clothing repairs, creative sewing and upcycling projects at Second Spin Sewing Studio.">
 
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        .gallery-section {
-            max-width: 1150px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .gallery-heading {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .gallery-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .gallery-filters button {
-            padding: 10px 20px;
-            border: 1px solid #777;
-            border-radius: 20px;
-            cursor: pointer;
-            background: white;
-        }
-
-        .gallery-filters button.active,
-        .gallery-filters button:hover {
-            background: #333;
-            color: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 22px;
-        }
-
-        .gallery-card {
-            border-radius: 10px;
-            overflow: hidden;
-            background: #f5f5f5;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-        }
-
-        .gallery-card img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-            display: block;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .gallery-card img:hover {
-            transform: scale(1.04);
-        }
-
-        .gallery-card p {
-            padding: 12px;
-            text-align: center;
-        }
-
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80vh;
-            object-fit: contain;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 38px;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-
-        @media (max-width: 600px) {
-            .gallery-section {
-                padding: 12px;
-            }
-
-            .gallery-card img {
-                height: 200px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Second Spin Sewing Studio</h1>
+    <!-- HEADER -->
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="enquiry.html">Enquiry</a>
-        <a href="contact.html">Contact</a>
-        <a href="mandela-day.html">Mandela Day</a>
+    <header class="site-header">
+        <div class="container header-content">
+
+            <img src="IMAGES/logo.jpg.jpg"
+                 alt="Second Spin Sewing Studio logo"
+                 class="logo">
+
+            <div>
+                <h1 class="studio-name">SECOND SPIN SEWING STUDIO</h1>
+                <p class="tagline">Repair • Restyle • Rewear</p>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services &amp; Workshops</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="mandela-day.html">Mandela Day</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-</header>
 
-<main class="gallery-section">
 
-    <div class="gallery-heading">
-        <h2>Our Inspiration Gallery</h2>
-        <p>Discover creativity, clothing repairs and the beauty of sustainable fashion.</p>
+    <!-- GALLERY SECTION -->
+
+    <main class="section">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Our Inspiration Gallery</h2>
+
+                <p>
+                    Discover creativity, clothing repairs and the beauty
+                    of sustainable fashion.
+                </p>
+            </div>
+
+
+            <!-- GALLERY FILTERS -->
+
+            <div class="gallery-filters">
+                <button class="active"
+                    onclick="filterGallery('all', this)">All</button>
+
+                <button
+                    onclick="filterGallery('repairs', this)">Repairs</button>
+
+                <button
+                    onclick="filterGallery('upcycling', this)">Upcycling</button>
+
+                <button
+                    onclick="filterGallery('sewing', this)">Sewing</button>
+            </div>
+
+
+            <!-- GALLERY IMAGES -->
+
+            <div class="gallery-grid">
+
+                <div class="gallery-card" data-category="repairs">
+                    <img
+                        src="https://image.uniqlo.com/UQ/ST3/ph/imagesother/Feature-Pages/ReUNIQLOSTUDIO/1015/1015/reduce-desktop.png"
+                        alt="Hands repairing a brown garment"
+                        onclick="openLightbox(this)">
+
+                    <p>Clothing Repairs</p>
+                </div>
+
+
+                <div class="gallery-card" data-category="sewing">
+                    <img
+                        src="https://csm.tarnow.pl/uploads/site/event/img_094495fc17d2fd76104d835a43953dbd.jpeg"
+                        alt="Fabric being stitched on a sewing machine"
+                        onclick="openLightbox(this)">
+
+                    <p>Creative Sewing</p>
+                </div>
+
+
+                <div class="gallery-card" data-category="upcycling">
+                    <img
+                        src="https://cdn.stayhappening.com/events7/banners/d01dc94df1cc6ec6a8915def8425aacb1f38be489d89bf8e99b8911fe823f056-rimg-w1200-h829-dcd9dad4-gmir.jpg?v=1743134950"
+                        alt="Sewing materials used for upcycling"
+                        onclick="openLightbox(this)">
+
+                    <p>Upcycling Projects</p>
+                </div>
+
+
+                <div class="gallery-card" data-category="repairs">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/5a555a504c0dbfb36fda563c/1528431279899-07X281DW0AKS6QT8IAV4/5_20_Jade%2B%282%29.jpg"
+                        alt="Fabric being repaired using an overlock sewing machine"
+                        onclick="openLightbox(this)">
+
+                    <p>Fabric Repairs</p>
+                </div>
+
+
+                <div class="gallery-card" data-category="sewing">
+                    <img
+                        src="https://www.glam.com/img/gallery/interested-in-upcycling-6-tools-youll-want-to-get-started/sewing-machine-1686255204.jpg"
+                        alt="Sewing machine used for creative clothing designs"
+                        onclick="openLightbox(this)">
+
+                    <p>Creative Designs</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- IMAGE LIGHTBOX -->
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+
+        <button
+            class="lightbox-close"
+            aria-label="Close image"
+            onclick="closeLightbox()">&times;</button>
+
+        <img id="lightboxImage"
+             src=""
+             alt="Enlarged gallery photograph">
+
     </div>
 
-    <div class="gallery-filters">
-        <button class="active" onclick="filterGallery('all', this)">All</button>
-        <button onclick="filterGallery('repairs', this)">Repairs</button>
-        <button onclick="filterGallery('upcycling', this)">Upcycling</button>
-        <button onclick="filterGallery('sewing', this)">Sewing</button>
-    </div>
 
-    <div class="gallery-grid">
+    <!-- FOOTER -->
 
-        <!-- Clothing Repairs -->
-        <div class="gallery-card" data-category="repairs">
-            <img
-                src="https://image.uniqlo.com/UQ/ST3/ph/imagesother/Feature-Pages/ReUNIQLOSTUDIO/1015/1015/reduce-desktop.png"
-                alt="Hands repairing a brown garment"
-                onclick="openLightbox(this)">
-            <p>Clothing Repairs</p>
+    <footer class="site-footer">
+        <div class="container">
+
+            <h3>Second Spin Sewing Studio</h3>
+
+            <p>Repair • Restyle • Rewear</p>
+
+            <p class="copyright">
+                &copy; 2026 Second Spin Sewing Studio. All rights reserved.
+            </p>
+
         </div>
+    </footer>
 
-        <!-- Creative Sewing -->
-        <div class="gallery-card" data-category="sewing">
-            <img
-                src="https://csm.tarnow.pl/uploads/site/event/img_094495fc17d2fd76104d835a43953dbd.jpeg"
-                alt="Fabric being stitched on a sewing machine"
-                onclick="openLightbox(this)">
-            <p>Creative Sewing</p>
-        </div>
 
-        <!-- Upcycling Projects -->
-        <div class="gallery-card" data-category="upcycling">
-            <img
-                src="https://cdn.stayhappening.com/events7/banners/d01dc94df1cc6ec6a8915def8425aacb1f38be489d89bf8e99b8911fe823f056-rimg-w1200-h829-dcd9dad4-gmir.jpg?v=1743134950"
-                alt="Sewing machine and materials used for upcycling"
-                onclick="openLightbox(this)">
-            <p>Upcycling Projects</p>
-        </div>
+    <!-- GALLERY JAVASCRIPT -->
 
-        <!-- Fabric Repairs -->
-        <div class="gallery-card" data-category="repairs">
-            <img
-                src="https://images.squarespace-cdn.com/content/v1/5a555a504c0dbfb36fda563c/1528431279899-07X281DW0AKS6QT8IAV4/5_20_Jade%2B%282%29.jpg"
-                alt="Fabric being repaired using an overlock sewing machine"
-                onclick="openLightbox(this)">
-            <p>Fabric Repairs</p>
-        </div>
+    <script>
 
-        <!-- Creative Designs -->
-        <div class="gallery-card" data-category="sewing">
-            <img
-                src="https://www.glam.com/img/gallery/interested-in-upcycling-6-tools-youll-want-to-get-started/sewing-machine-1686255204.jpg"
-                alt="Sewing creative clothing designs in a workshop"
-                onclick="openLightbox(this)">
-            <p>Creative Designs</p>
-        </div>
+        // Filter gallery images
 
-    </div>
-</main>
+        function filterGallery(category, button) {
 
-<!-- Image Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button
-        class="lightbox-close"
-        aria-label="Close image"
-        onclick="closeLightbox()">&times;</button>
+            const cards = document.querySelectorAll(".gallery-card");
 
-    <img id="lightboxImage" src="" alt="Enlarged gallery photograph">
-</div>
+            cards.forEach(function(card) {
 
-<script>
-    // Filter gallery images
-    function filterGallery(category, button) {
-        const cards = document.querySelectorAll(".gallery-card");
+                card.style.display =
+                    (category === "all" ||
+                     card.dataset.category === category)
+                    ? ""
+                    : "none";
 
-        cards.forEach(function(card) {
-            card.style.display =
-                (category === "all" || card.dataset.category === category)
-                ? ""
-                : "none";
-        });
+            });
 
-        document.querySelectorAll(".gallery-filters button").forEach(function(btn) {
-            btn.classList.remove("active");
-        });
+            document.querySelectorAll(".gallery-filters button")
+                .forEach(function(btn) {
+                    btn.classList.remove("active");
+                });
 
-        button.classList.add("active");
-    }
-
-    // Open enlarged image
-    function openLightbox(image) {
-        document.getElementById("lightboxImage").src = image.src;
-        document.getElementById("lightbox").style.display = "flex";
-    }
-
-    // Close enlarged image
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
-
-    // Close lightbox using Escape key
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-            closeLightbox();
+            button.classList.add("active");
         }
-    });
-</script>
+
+
+        // Open enlarged image
+
+        function openLightbox(image) {
+
+            document.getElementById("lightboxImage").src = image.src;
+
+            document.getElementById("lightbox")
+                .style.display = "flex";
+        }
+
+
+        // Close enlarged image
+
+        function closeLightbox() {
+
+            document.getElementById("lightbox")
+                .style.display = "none";
+        }
+
+
+        // Close lightbox using Escape key
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+
+        });
+
+    </script>
 
 </body>
 </html>
